@@ -21,7 +21,7 @@ This Repository is created for cmake build system VS Code integration of **GD32L
 		- _Projects/Template/.vscode/launch.json:14:_
 			`"serverpath": "${workspaceFolder}/../../Tools/xpack-openocd-0.11.0-3/bin/openocd.exe"`
 		- _Projects/Template/.vscode/launch.json:17:_
-			`"${workspaceFolder}/../../Tools/xpack-openocd-0.11.0-3/scripts/target/openocd_gdlink_gd32e23x.cfg"`
+			`"${workspaceFolder}/../../Tools/xpack-openocd-0.11.0-3/scripts/target/openocd_gdlink_gd32l23x.cfg"`
 			- If you want to debug another MCU, then you can use another **[.cfg]** file of OpenOCD.
 		- _Projects/Template/.vscode/task.json:_
 			- Find and change all following in paths:
@@ -54,7 +54,7 @@ This Repository is created for cmake build system VS Code integration of **GD32L
 		`"path": "C:\\Program Files\\Git\\bin\\bash.exe"`
 
 ### 3. Download or Clone **the Repository** into your hard drive.
-- https://github.com/burakenez/gd32e23x-demo-suites-cmake.git
+- https://github.com/burakenez/gd32l23x-demo-suites-cmake.git
 - Avoid longh directory paths. It can cause some building problems.
 
 ### 4. Open Project folder in VS Code, not the top level folder directory.
@@ -92,16 +92,16 @@ This Repository is created for cmake build system VS Code integration of **GD32L
 		- **Application**
 			- **Core**
 				- **Inc**
-					- **gd32e23x_it.h:** _Header file for interrupt handling functions specific to the GD32L23x microcontroller._
-					- **gd32e23x_libopt.h:** _Header for library options and configurations._
+					- **gd32l23x_it.h:** _Header file for interrupt handling functions specific to the GD32L23x microcontroller._
+					- **gd32l23x_libopt.h:** _Header for library options and configurations._
 					- **systick.h:** _Header for SysTick timer-related definitions and functions._
 				- **Src**
-					- **gd32e23x_it.c:** _Source file implementing interrupt handlers for the GD32L23x._
+					- **gd32l23x_it.c:** _Source file implementing interrupt handlers for the GD32L23x._
 					- **main.c:** _Main application file where the program's entry point and main loop are defined._
-					- **system_gd32e23x.c:** _Contains system-level initialization, such as setting up the clock._
+					- **system_gd32l23x.c:** _Contains system-level initialization, such as setting up the clock._
 					- **systick.c:** _Source file for SysTick timer configurations and related functions._
 			- **Startup**
-				- **startup_gd32e23x.s:** _Assembly file containing the startup code, interrupt vector table, and initialization routines._
+				- **startup_gd32l23x.s:** _Assembly file containing the startup code, interrupt vector table, and initialization routines._
 			- **User**
 				- **syscalls.c:** _Implements system calls and I/O functions for the application, typically used for retargeting._
 			- **CMakeLists.txt:** _Specifies CMake instructions for compiling the application._
